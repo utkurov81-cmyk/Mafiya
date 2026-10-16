@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎭 MAFIA UZ — Professional Telegram Mafia Bot
 
 > O'zbek tilidagi professional Mafia o'yini boti. Haqiqiy kecha-kunduz tizimi, maxfiy rollar, ovoz berish, reyting va maskalar!
@@ -256,3 +257,7 @@ Testlar quyidagilarni tekshiradi:
 ---
 
 *MAFIA UZ © 2024 — Professional Telegram Mafia O'yini*
+=======
+# Mafiya
+Bu bot odamlaraga zavq berish uchun
+>>>>>>> b95bc21a44a124a6f457c4bbd453040b1d616506
