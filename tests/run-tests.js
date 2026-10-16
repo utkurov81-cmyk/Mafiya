@@ -6,6 +6,9 @@ const path = require('path');
 const fs = require('fs');
 
 // Test uchun vaqtinchalik DB
+['./data/test_mafia.db', './data/test_mafia.db-wal', './data/test_mafia.db-shm'].forEach(f => {
+  try { fs.unlinkSync(f); } catch {}
+});
 process.env.DB_PATH = './data/test_mafia.db';
 process.env.BOT_TOKEN = 'test_token_12345:test';
 process.env.LOG_LEVEL = 'error';

@@ -52,6 +52,19 @@ bot.telegram.getMe().then((me) => {
   logger.info(`🎭 MAFIA UZ bot muvaffaqiyatli ishga tushdi!`);
   logger.info(`🤖 Bot: @${me.username} (${me.first_name})`);
   logger.info(`📡 Polling rejimida xabarlarni qabul qilmoqda...`);
+
+  // Railway va bulutli platformalar uchun Health Check web server
+  if (process.env.PORT) {
+    const http = require('http');
+    const server = http.createServer((req, res) => {
+      res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+      res.end('🎭 Mafia UZ Telegram Bot faol ishlamoqda!');
+    });
+    server.listen(process.env.PORT, '0.0.0.0', () => {
+      logger.info(`🌐 Web server ${process.env.PORT}-portda tinglamoqda`);
+    });
+  }
+
   return bot.launch({ dropPendingUpdates: true });
 }).catch((err) => {
   logger.error(`❌ Bot ishga tushmadi: ${err.message}`);
